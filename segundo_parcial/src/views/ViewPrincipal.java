@@ -32,6 +32,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jm_file = new javax.swing.JMenu();
         jmi_clientes = new javax.swing.JMenuItem();
         jmi_peliculas = new javax.swing.JMenuItem();
+        jmi_rentas = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -45,6 +46,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jmi_peliculas.setText("Peliculas");
         jm_file.add(jmi_peliculas);
 
+        jmi_rentas.setText("Rentas");
+        jm_file.add(jmi_rentas);
+
         jMenuBar1.add(jm_file);
 
         setJMenuBar(jMenuBar1);
@@ -53,11 +57,11 @@ public class ViewPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 531, Short.MAX_VALUE)
+            .addGap(0, 563, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 344, Short.MAX_VALUE)
+            .addGap(0, 383, Short.MAX_VALUE)
         );
 
         pack();
@@ -104,5 +108,6 @@ public class ViewPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenu jm_file;
     public javax.swing.JMenuItem jmi_clientes;
     public javax.swing.JMenuItem jmi_peliculas;
+    public javax.swing.JMenuItem jmi_rentas;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,11 +16,14 @@ public class ControllerPrincipal {
     ModelPrincipal model_principal;
     ModelPeliculas model_peliculas;
     ModelClientes model_clientes;
+    ModelRentas model_rentas;
     ViewPeliculas view_peliculas;
     ViewClientes view_clientes;
     ViewPrincipal view_principal;
+    ViewRentas view_rentas;
     ControllerPeliculas controller_peliculas;
     ControllerClientes controller_clientes;
+    ControllerRentas controller_rentas;
     
     
     public ControllerPrincipal(ModelPrincipal model_principal, Object views[]) {
@@ -28,8 +31,10 @@ public class ControllerPrincipal {
         this.view_principal = (ViewPrincipal) views[1];
         this.view_peliculas = (ViewPeliculas) views[0];
         this.view_clientes = (ViewClientes) views[2];
+        this.view_rentas = (ViewRentas) views[3];
         view_principal.jmi_peliculas.addActionListener(e -> jmi_peliculasActionPerformed());
         view_principal.jmi_clientes.addActionListener(e -> jmi_clientesActionPerformed());
+        view_principal.jmi_rentas.addActionListener(e -> jmi_rentasActionPerformed());
         initView();
     }
     
@@ -41,6 +46,12 @@ public class ControllerPrincipal {
     
          public void jmi_clientesActionPerformed(){
         this.view_principal.setContentPane(view_clientes);
+        this.view_principal.revalidate();
+        this.view_principal.repaint();
+    }
+    
+         public void jmi_rentasActionPerformed(){
+        this.view_principal.setContentPane(view_rentas);
         this.view_principal.revalidate();
         this.view_principal.repaint();
     }
